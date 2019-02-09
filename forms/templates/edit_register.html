@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+     {% block title %}
+         Update to data
+    {% endblock %}
+
+{%  block content %}
+<h1>Update Here</h1>
+{% load bootstrap4 %}
+
+<form method="POST" action="">
+    {%csrf_token%}
+        {% bootstrap_form form %}
+    {% buttons %}
+
+    <button type="submit" class="btn btn-primary">Update data</button>
+        {% endbuttons %}
+
+</form>
+    {% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+     {% block title %}
+         Profile
+    {% endblock %}
+{% load bootstrap4 %}
+
+{%  block content %}
+{% if request.user.is_authenticated %}
+Welcome : {{username}} <br/>
+<a href="{% url 'logout_user' %}">log out</a>
+{% endif %}
+    {% endblock %}

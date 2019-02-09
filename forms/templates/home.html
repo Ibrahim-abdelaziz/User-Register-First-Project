@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+     {% block title %}
+         USERS
+    {% endblock %}
+
+{%  block content %}
+  {% for i in note %}
+
+ <h4><a href="{% url 'one_note' i.id %}">  User : {{i.name}}</a></h4>
+     <!-- <a class="btn btn-primary btn-lg" href="{% url 'edit' i.id %}" role="button">Edit This Post</a> -->
+        <!-- this code if you want to do edit for any post from home page -->
+    <!-- <a class="btn btn-primary btn-lg" href="{% url 'delete' i.id %}" role="button">Delete This Post</a> -->
+     <!-- this code if you want to do delete for any post from home page -->
+
+ {% endfor %}
+
+To Join in Our Site Click Here : <a href="{% url 'register' %}">Register</a>
+     {%  endblock %}
+

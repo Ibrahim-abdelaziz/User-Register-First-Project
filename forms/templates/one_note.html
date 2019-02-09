@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+     {% block title %}
+       One_USER
+    {% endblock %}
+
+{% block content %}
+
+ <h2> first name :{{notee.name}} <h2/>
+ <h2> E-mail :{{notee.email}} <h2/>
+  <h2> Age :{{notee.age}} <h2/>
+ <h2> Birthday :{{notee.birthday}} <h2/>
+  {% if notee.img %}
+     <img src="{{notee.img.url}}" alt="">
+  {%endif%}
+
+<a class="btn btn-primary btn-lg" href="{% url 'edit' notee.id %}" role="button">Edit This Post</a> <br/> <br/>
+<a class="btn btn-primary btn-lg" href="{% url 'delete' notee.id %}" role="button">Delete This Post</a>
+    {% endblock %}
+
+
